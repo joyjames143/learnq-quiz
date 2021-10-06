@@ -90,7 +90,7 @@ export default function MainSkeleton({level,numberOfQuestions,bg,helperarray,rem
                         <h2>Question {currentQuestion+1} of {finalArray.length}</h2>
                     </div>
                     <div className="question-test-div">
-                        <h2>{currentQuestion + 1} &nbsp;.&nbsp; {finalArray.length === totalNeeded ? 
+                        <h2>{currentQuestion + 1} <p>.&nbsp;</p> {finalArray.length === totalNeeded ? 
                             <MathJaxContext version={3} config={config}>
                                 <MathJax inline dynamic>{finalArray[currentQuestion].questionText}</MathJax>
                             </MathJaxContext>
