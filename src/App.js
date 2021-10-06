@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import "./App.css"
+import Difficulty from './components/Difficulty';
+import Easy from './components/Easy';
+import Hard from './components/Hard';
+import Medium from './components/Medium';
+import Any from './components/Any';
+import Submit from './components/Submit';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className='app'>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Difficulty/>
+                    </Route>
+                    <Route exact path="/easy">
+                        <Easy/>
+                    </Route>
+                    <Route exact path="/medium">
+                        <Medium />
+                    </Route>
+                    <Route exact path="/hard">
+                        <Hard/>
+                    </Route>
+                    <Route exact path="/any">
+                        <Any/>
+                    </Route>
+                    <Route exact path="/submit">
+                        <Submit />
+                    </Route>
+                </Switch>
+            </Router>
+					
+		</div>
+    )
 }
-
-export default App;
