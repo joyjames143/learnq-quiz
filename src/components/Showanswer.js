@@ -19,7 +19,7 @@ export default function Showanswer({qnsNum,totalQns,specificQns,userRememberArra
             <div className="showanswer-questions-main-div">
                     <div className="showanswer-question-test-div">
                         
-                        <h2> {qnsNum }<p>.&nbsp;</p>
+                        <h2> {qnsNum }<p>&nbsp;&nbsp;</p>
                         <MathJaxContext version={3} config={config}>
                                 <MathJax inline dynamic>{specificQns.questionText}</MathJax>
                         </MathJaxContext>
