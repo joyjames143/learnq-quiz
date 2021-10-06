@@ -11,10 +11,14 @@ const config = {
       packages: { "[+]": ["html"] },
       inlineMath: [
         ["$", "$"],
+        ["\\(", "\\)"]
       ],
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ]
     }
   };
-
 export default function MainSkeleton({level,numberOfQuestions,bg,helperarray,rememberArrayHelper,totalNeeded,totalcompressedQuestions}) {
     
     const[currentQuestion,setCurrentQuestion] = useState(0)

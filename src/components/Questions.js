@@ -238,7 +238,7 @@ export const questions = [
         num:19,
         marks:1,
         difficulty:"HARD",
-        questionText:"$(10 × 5^(n+1)+ 25 × 5^n) ÷ (3 × 5^(n+2)+ 10 × 5^(n+1))$",
+        questionText:"\\[(10 × 5^(n+1)+ 25 × 5^n) ÷ (3 × 5^(n+2)+ 10 × 5^(n+1))\\]",
         answerOptions:[
            {answerText:"$3/5$",isCorrect:true,uniID:"uid 19.1 "},
            {answerText:"$1$",isCorrect:false,uniID:"uid 19.2 "},
