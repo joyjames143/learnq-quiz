@@ -1,6 +1,17 @@
 import React from 'react'
 import { Button,} from 'styled-button-component';
 import "../componentsCSS/Showanswer.css"
+import { MathJax, MathJaxContext } from "better-react-mathjax";
+
+const config = {
+    loader: { load: ["[tex]/html"] },
+    tex: {
+      packages: { "[+]": ["html"] },
+      inlineMath: [
+        ["$", "$"],
+      ],
+    }
+  };
 
 export default function Showanswer({qnsNum,totalQns,specificQns,userRememberArray}) {
     return (
@@ -8,14 +19,20 @@ export default function Showanswer({qnsNum,totalQns,specificQns,userRememberArra
             <div className="showanswer-questions-main-div">
                     <div className="showanswer-question-test-div">
                         
-                        <h2> {qnsNum} . {specificQns.questionText} </h2>
-                        <Button>{specificQns.difficulty}</Button>
+                        <h2> {qnsNum} . &nbsp;&nbsp;
+                        <MathJaxContext version={3} config={config}>
+                                <MathJax inline dynamic>{specificQns.questionText}</MathJax>
+                        </MathJaxContext>
+                             </h2>
+                        <Button className="SA-info-btn">{specificQns.difficulty}</Button>
                     </div>
                     <div className="showanswer-four-options-div">
                         {specificQns.answerOptions.map(
                                 (option,i)=>(
-                                <Button disabled key={option.answerText+i} success={option.isCorrect?true:false} danger={userRememberArray[i]!=="notAttemted" && userRememberArray[i] !== option.answerText?true:false } dark >
-                                    {option.answerText}
+                                <Button className="showanswer-individual-btn" disabled key={option.answerText+i} success={option.isCorrect?true:false} danger={userRememberArray[i]!=="notAttemted" && userRememberArray[i] !== option.answerText?true:false } dark >
+                                    <MathJaxContext version={3} config={config}>
+                                            <MathJax inline dynamic>{option.answerText}</MathJax>
+                                    </MathJaxContext>
                                 </Button>))
                         }
                     </div>

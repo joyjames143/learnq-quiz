@@ -16,7 +16,7 @@ export default function Difficulty() {
                     <h1>GAME OF KNOWLEDGE</h1>
                 </div>
             <div className="main-four-buttons-div-with-heading">
-                    <h3>select your prefered level</h3>
+                    <h2>select your prefered level</h2>
                     <div className= "main-four-buttons-div">
                             <Link to="/easy">
                                     <Button m1 info lg className="btn">

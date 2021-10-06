@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react'
+import {React} from 'react'
 import {questions} from "./Questions"
 import easyBg from "../images/easyBg.jpg"
 import MainSkeleton from "./MainSkeleton.js"

@@ -25,7 +25,7 @@
     
 }
 .main-four-buttons-div-with-heading{
-    height: calc(100vh - 250px);
+    height: calc(100vh - 350px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,11 @@
     flex-wrap: wrap;
 }
 .main-four-buttons-div .btn{
-    margin: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 150px;
 }
 
 @media(max-width:450px){

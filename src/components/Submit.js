@@ -25,7 +25,6 @@ export default function Submit() {
 
     const changeAnswerNeed = () => {
         setAnswersNeeded(!answersNeeded)
-        console.log(crt,final,rememberSelected)
     }
     return (
         <>

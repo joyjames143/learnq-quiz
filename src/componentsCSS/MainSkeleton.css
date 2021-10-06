@@ -28,6 +28,7 @@
 }
 .question-numbers-div{
     text-align: center;
+    font-family: 'PT Serif', serif;
 }
 .question-test-div{
     margin-left: 10%;
@@ -36,6 +37,7 @@
 .four-options-div{
     margin-left: 15%;
     margin-right: 15%;
+    font-family: 'PT Serif', serif;
 }
 .four-options-div .opt-buttons{
     display: flex;
@@ -46,6 +48,7 @@
 }
 .question-test-div h2{
     display: flex;
+    font-family: 'PT Serif', serif;
 }
 .MathJax{
     text-align: left !important;
@@ -55,6 +58,6 @@
     width: 100vw;
     display:flex;
     justify-content: space-around;
-    bottom: 50px;
+    bottom: 100px;
     position: absolute;
 }

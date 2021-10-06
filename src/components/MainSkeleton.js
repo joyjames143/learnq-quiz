@@ -1,15 +1,22 @@
 import {React, useState, useEffect} from 'react'
 import "../componentsCSS/MainSkeleton.css"
-import {questions} from "./Questions"
-import mainBg from "../images/mainBg.jpg"
 import { Button,} from 'styled-button-component';
 import { Link } from "react-router-dom"
 import { FaHome } from "react-icons/fa";
-import MathJax from "mathjax3-react";
-import { MathComponent } from 'mathjax-react'
-import { extractMath } from 'extract-math'
+import { MathJax, MathJaxContext } from "better-react-mathjax";
+
+const config = {
+    loader: { load: ["[tex]/html"] },
+    tex: {
+      packages: { "[+]": ["html"] },
+      inlineMath: [
+        ["$", "$"],
+      ],
+    }
+  };
 
 export default function MainSkeleton({level,numberOfQuestions,bg,helperarray,rememberArrayHelper,totalNeeded,totalcompressedQuestions}) {
+    
     const[currentQuestion,setCurrentQuestion] = useState(0)
     const[finalArray,setFinalArray] = useState([])
     const[totalCorrect,setTotalCorrect] = useState([])
@@ -79,14 +86,22 @@ export default function MainSkeleton({level,numberOfQuestions,bg,helperarray,rem
                         <h2>Question {currentQuestion+1} of {finalArray.length}</h2>
                     </div>
                     <div className="question-test-div">
-                        <h2> {currentQuestion + 1} . {finalArray.length === totalNeeded ? finalArray[currentQuestion].questionText:""} </h2>
+                        <h2>{currentQuestion + 1} . &nbsp;&nbsp;{finalArray.length === totalNeeded ? 
+                            <MathJaxContext version={3} config={config}>
+                                <MathJax inline dynamic>{finalArray[currentQuestion].questionText}</MathJax>
+                            </MathJaxContext>
+                                :""
+                            } 
+                        </h2>
                     </div>
                     <div className="four-options-div">
                         {finalArray.length === totalNeeded ? 
                             finalArray[currentQuestion].answerOptions.map(
                                 (option,i)=>(
                                 <Button key={option.answerText+i} outline={remeberOption[currentQuestion][i] !== option.uniID?true:false} secondary={remeberOption[currentQuestion][i] === option.uniID?true:false} className="opt-buttons" onClick={()=>optionClicked(option,i)} secondary>
-                                    {option.answerText}
+                                     <MathJaxContext version={3} config={config}>
+                                            <MathJax inline dynamic>{option.answerText}</MathJax>
+                                    </MathJaxContext>
                                 </Button>))
                         :""}
                     </div>

@@ -2,6 +2,7 @@
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 40px;
+    font-family: 'PT Serif', serif;
 }
 .showanswer-four-options-div{
     display: flex;
@@ -10,4 +11,8 @@
 .showanswer-question-test-div{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.showanswer-individual-btn{
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
