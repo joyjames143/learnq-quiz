@@ -17,7 +17,7 @@ export const questions = [
         num:2,
         marks:1,
         difficulty:"EASY",
-        questionText:"Number of terms in the expression $3.x^2.y - 2.y^2.z - z^2.x + 5$ is",
+        questionText:"Number of terms in the expression $3.x^2.y - 2.y^2.z$$ - z^2.x + 5$ is",
         answerOptions:[
            {answerText:"2",isCorrect:false, uniID:"uid 2.1 "},
            {answerText:"3",isCorrect:false, uniID:"uid 2.2 "},
@@ -160,7 +160,7 @@ export const questions = [
         num:13,
         marks:1,
         difficulty:"MEDIUM",
-        questionText:"$(2^2)^n = (2^3)^4, then n = $",
+        questionText:"$(2^2)^n = (2^3)^4$, then $n = $",
         answerOptions:[
            {answerText:"4",isCorrect:false,uniID:"uid 13.1 "},
            {answerText:"3",isCorrect:false,uniID:"uid 13.2 "},
@@ -238,7 +238,7 @@ export const questions = [
         num:19,
         marks:1,
         difficulty:"HARD",
-        questionText:"$(10 × 5^(n+1)+ 25 × 5^n)$ $÷$ $(3 × 5^(n+2)+ 10 × 5^(n+1))&",
+        questionText:"$(10 × 5^(n+1)+ 25 × 5^n)$ $÷$ $(3 × 5^(n+2)+ 10 × 5^(n+1))$",
         answerOptions:[
            {answerText:"$3/5$",isCorrect:true,uniID:"uid 19.1 "},
            {answerText:"$1$",isCorrect:false,uniID:"uid 19.2 "},
@@ -251,7 +251,7 @@ export const questions = [
         num:20,
         marks:1,
         difficulty:"EASY",
-        questionText:"$(-1)^50 × (-1)^51 × (1)^100 × (-1)^101 =$",
+        questionText:"$(-1)^50 × (-1)^51 × $ $(1)^100 × (-1)^101 =$",
         answerOptions:[
            {answerText:"-1",isCorrect:false,uniID:"uid 20.1 "},
            {answerText:"1",isCorrect:true,uniID:"uid 20.2 "},
